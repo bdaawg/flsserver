@@ -17,7 +17,6 @@ using FLS.Server.Data.Exceptions;
 using FLS.Server.Data.Mapping;
 using FLS.Server.Data.Resources;
 using FLS.Server.Service.Email;
-using Microsoft.AspNet.Identity;
 using NLog;
 using Constants = FLS.Server.Data.Resources.Constants;
 

@@ -28,8 +28,6 @@ using FLS.Server.Tests.Infrastructure;
 using FLS.Server.Tests.Mocks.Services;
 using FLS.Server.WebApi.Identity;
 using Foundation.ObjectHydrator;
-using Microsoft.AspNet.Identity;
-using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NLog;
@@ -114,6 +112,7 @@ namespace FLS.Server.Tests
             container.RegisterType<IIdentityMessageService, IdentityEmailService>();
             container.RegisterType<IIdentityService, IdentityService>(new HierarchicalLifetimeManager());
             container.RegisterType<IdentityUserManager>();
+            // TODO ASP.NET identity should be replaced with ASP.NET Core identity. For more details see https://docs.microsoft.com/aspnet/core/migration/identity.
             container.RegisterType<UserManager<User, Guid>, IdentityUserManager>();
             container.RegisterType<IExtensionService, ExtensionService>();
             //container.RegisterType<IdentitySignInManager<User, Guid>, IdentitySignInManager>();
